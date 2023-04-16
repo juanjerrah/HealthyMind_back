@@ -1,4 +1,6 @@
-﻿namespace Diario.Api.Models;
+﻿using Core.Api.Models;
+
+namespace Diario.Api.Models;
 
 public class Diario : Entity
 {

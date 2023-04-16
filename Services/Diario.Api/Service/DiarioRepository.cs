@@ -1,4 +1,5 @@
-﻿using Diario.Api.data;
+﻿using System.Linq.Expressions;
+using Diario.Api.data;
 
 namespace Diario.Api.Service;
 
@@ -20,9 +21,15 @@ public class DiarioRepository : IDiarioRepository
     public Models.Diario? ObterDiarioPorId(Guid? id) 
         => _context.Diarios.FirstOrDefault(x => x.Id.Equals(id));
 
-    public IEnumerable<Models.Diario> ObterDiarios()
+    public IEnumerable<Models.Diario> ObterDiarios(Expression<Func<Models.Diario, bool>> predicate,
+        int? start = null, int? length = null)
     {
-        return _context.Diarios.ToList();
+        var query = _context.Set<Models.Diario>().Where(predicate);
+        
+        if (start is not null && length is not null)
+            query = query.Skip(start.Value).Take(length.Value);
+        
+        return query.ToList();
     }
 
 

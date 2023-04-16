@@ -10,5 +10,6 @@ public class DomainToViewModelMappingProfile: Profile
         CreateMap<Models.Diario, CreateDiaryViewModel>();
         CreateMap<Models.Diario, DiarioViewModelGrid>();
         CreateMap<Models.Diario, DiarioViewModel>();
+        CreateMap<Models.Diario, DiarioViewModelFilter>();
     }
 }
