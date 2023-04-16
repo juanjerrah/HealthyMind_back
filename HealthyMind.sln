@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diario.Api", "Services\Diar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Api", "Services\Core.Api\Core.Api.csproj", "{C2FF248B-C1AE-4D06-A477-6C466BE9E0AB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Humor.Api", "Services\Humor.Api\Humor.Api.csproj", "{2D3840D8-7769-4849-B423-4071DF39636E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,5 +30,9 @@ Global
 		{C2FF248B-C1AE-4D06-A477-6C466BE9E0AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2FF248B-C1AE-4D06-A477-6C466BE9E0AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2FF248B-C1AE-4D06-A477-6C466BE9E0AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D3840D8-7769-4849-B423-4071DF39636E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D3840D8-7769-4849-B423-4071DF39636E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D3840D8-7769-4849-B423-4071DF39636E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D3840D8-7769-4849-B423-4071DF39636E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
