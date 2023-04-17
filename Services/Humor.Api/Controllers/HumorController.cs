@@ -57,4 +57,36 @@ public class HumorController : Controller
         _repository.SaveChanges();
         return humor.Id;
     }
+    
+    [HttpPut]
+    public IActionResult UpdateHumor(UpdateHumorViewModel humorViewModel)
+    {
+        var currentHumor = _repository.ObterHumorPorId(humorViewModel.Id);
+        if (currentHumor is null)
+            return NotFound("Diario não encontrado!");
+
+        if(!string.IsNullOrWhiteSpace(humorViewModel.Titulo))
+            currentHumor.SetTitulo(humorViewModel.Titulo);
+        if(!string.IsNullOrWhiteSpace(humorViewModel.Descricao))
+            currentHumor.SetDescricao(humorViewModel.Descricao);
+        if(humorViewModel.PermiteVisualizacao is not null)
+            currentHumor.SetPermiteVisualizacao(humorViewModel.PermiteVisualizacao.Value);
+        if(humorViewModel.TipoHumor is not null)
+            currentHumor.SetTipoHumor(humorViewModel.TipoHumor.Value);
+        
+        currentHumor.SetDataAlteracao(DateTimeOffset.UtcNow);
+        
+        _repository.AtualizarHumor(currentHumor);
+        _repository.SaveChanges();
+        return Ok();
+    }
+    
+    [HttpDelete]
+    public void ApagarDiario(Guid id)
+    {
+        var diario = _repository.ObterHumorPorId(id);
+        if (diario == null) return;
+        _repository.DeletarHumor(diario);
+        _repository.SaveChanges();
+    }
 }

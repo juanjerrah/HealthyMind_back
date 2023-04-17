@@ -13,5 +13,6 @@ public class DomainToVIewModelMappingProfile : Profile
             .ForMember(vm => vm.TituloHumor, opt => opt.MapFrom(src => src.Titulo))
             .ForMember(vm => vm.TipoDoHumor, opt => opt.MapFrom(src => src.TipoHumor));
         CreateMap<HumorDomain, CreateHumorViewModel>();
+        CreateMap<HumorDomain, UpdateHumorViewModel>();
     }
 }
