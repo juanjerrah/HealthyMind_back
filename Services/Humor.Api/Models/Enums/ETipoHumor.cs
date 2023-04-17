@@ -2,7 +2,7 @@
 
 public enum ETipoHumor
 {
-    Feliz,
-    Bravo,
-    Triste
+    Feliz = 1,
+    Bravo = 2,
+    Triste = 3
 }

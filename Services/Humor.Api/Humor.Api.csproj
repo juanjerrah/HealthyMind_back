@@ -19,11 +19,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Controllers" />
-      <Folder Include="MappingsDto\ViewModels" />
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\Core.Api\Core.Api.csproj" />
     </ItemGroup>
 

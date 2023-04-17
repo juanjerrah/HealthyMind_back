@@ -30,5 +30,7 @@ public class Humor : Entity
     public void SetDescricao(string descricao) => Descricao = descricao;
     public void SetPermiteVisualizacao(bool permiteVisualizacao) => PermiteVisualizacao = permiteVisualizacao;
     public void SetTipoHumor(ETipoHumor tipoHumor) => TipoHumor = tipoHumor;
+    public void SetDataInclusao(DateTimeOffset dataInclusao) => DataInclusao = dataInclusao;
+    public void SetDataAlteracao(DateTimeOffset dataAlteracao) => DataAlteracao = dataAlteracao;
 
 }
